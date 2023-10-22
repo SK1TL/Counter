@@ -41,7 +41,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="increaseOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5e1-7a-zqk"/>
+                                    <action selector="increaseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="caU-8g-1Jd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZb-Dv-12O">
@@ -53,7 +53,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="resetAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2zi-at-6tV"/>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nO8-yu-Q4b"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qA3-et-RdA">
@@ -64,7 +64,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="decreaseOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B6h-47-B82"/>
+                                    <action selector="decreaseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZZw-9f-6k0"/>
                                 </connections>
                             </button>
                         </subviews>
