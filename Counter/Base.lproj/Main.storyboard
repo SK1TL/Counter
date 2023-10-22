@@ -74,7 +74,7 @@
                     <connections>
                         <outlet property="counterLabel" destination="Dv3-mx-xdz" id="G7D-m0-LFh"/>
                         <outlet property="decreaseButton" destination="qA3-et-RdA" id="IIJ-Ub-0kE"/>
-                        <outlet property="historyText" destination="HDq-bl-N7b" id="j7m-LS-RwL"/>
+                        <outlet property="historyTextView" destination="HDq-bl-N7b" id="88S-xa-hww"/>
                         <outlet property="increaseButton" destination="DEB-Pk-gP9" id="uSO-C2-B5c"/>
                         <outlet property="resetButton" destination="SZb-Dv-12O" id="1UQ-jN-Ycz"/>
                     </connections>

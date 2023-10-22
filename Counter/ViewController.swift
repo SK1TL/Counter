@@ -1,14 +1,12 @@
 import UIKit
 
-var todayDate = Date()
-let dateFormatter = DateFormatter()
-let dateInfo = dateFormatter.string(from: todayDate)
-
 class ViewController: UIViewController {
     private var count = 0
 
+    let dateFormatter = DateFormatter()
+    
     @IBOutlet weak var counterLabel: UILabel!
-    @IBOutlet weak var historyText: UITextView!
+    @IBOutlet weak var historyTextView: UITextView!
     @IBOutlet weak var increaseButton: UIButton!
     @IBOutlet weak var decreaseButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
@@ -18,23 +16,28 @@ class ViewController: UIViewController {
         dateFormatter.dateStyle = .short
         dateFormatter.timeStyle = .medium
         dateFormatter.locale = Locale(identifier: "ru_RU")
-        historyText.isEditable = false
-        historyText.isScrollEnabled = true
+        historyTextView.isEditable = false
+        historyTextView.isScrollEnabled = true
+    }
+    
+    private func dateString() -> String {
+        var todayDate = Date()
+        return dateFormatter.string(from: todayDate)
     }
 
     @IBAction private func increaseOne(_ sender: Any) {
         count += 1
         counterLabel.text = "Значение счётчика: \(count)"
-        historyText.text += "\n \(dateInfo): значение изменено на +1"
+        historyTextView.text += "\n \(dateString()): значение изменено на +1"
     }
     
     @IBAction private func decreaseOne(_ sender: Any) {
         if count > 0 {
             count -= 1
             counterLabel.text = "Значение счётчика: \(count)"
-            historyText.text += "\n \(dateInfo): значение изменено на -1"
+            historyTextView.text += "\n \(dateString()): значение изменено на -1"
         } else {
-            historyText.text += "\n \(dateInfo): попытка уменьшить значение счётчика ниже 0"
+            historyTextView.text += "\n \(dateString()): попытка уменьшить значение счётчика ниже 0"
         }
         
     }
@@ -42,7 +45,7 @@ class ViewController: UIViewController {
     @IBAction private func resetAll(_ sender: Any) {
         count = 0
         counterLabel.text = "Значение счётчика: \(count)"
-        historyText.text += "\n \(dateInfo): значение сброшено"
+        historyTextView.text += "\n \(dateString()): значение сброшено"
     }
 }
 
